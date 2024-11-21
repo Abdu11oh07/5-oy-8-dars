@@ -54,7 +54,16 @@ class Database:
         for sql in sqls:
             db.create_tables(*sql)
             
-    def insert_into_classes()
+    def insert_into_classes(self,clas_name,teacher_id,student_id):
+        sql = '''insert into classes(clas_name,teacher_id,student_id) values (%s,%s,%s)'''
+        self.manager(sql,clas_name,teacher_id,student_id,commit=True)
         
         
 db = Database()
+
+classes = [
+    ('39-maktab',1,1),
+    ('19-maktab',2,2),
+    ('29-maktab',3,3)
+]
+for clas 
